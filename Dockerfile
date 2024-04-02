@@ -1,7 +1,5 @@
 # Smallest base image
-FROM alpine:3.5
-
-MAINTAINER John Felten<john.felten@gmail.com>
+FROM alpine:3.19
 
 ADD VERSION .
 
@@ -14,4 +12,3 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community/" >> /etc/apk/reposi
 # Configure tun
 RUN mkdir -p /dev/net && \
      mknod /dev/net/tun c 10 200 
-
